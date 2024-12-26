@@ -1,0 +1,47 @@
+[project]
+name = "drf-jwt-httponly-cookie"
+version = "0.1.0"
+description = "Securing DRF with JWT authentication in httponly cookie using django, drf, simplejwt, drf-spectacular and drf-standardized-errors"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django-cors-headers>=4.6.0",
+    "django>=5.1.4",
+    "djangorestframework>=3.15.2",
+    "djangorestframework-simplejwt>=5.3.1",
+    "drf-spectacular>=0.28.0",
+    "drf-standardized-errors>=0.14.1",
+    "python-decouple>=3.8",
+    "psycopg2-binary>=2.9.10",
+]
+
+[dependency-groups]
+dev = [
+    "django-debug-toolbar>=4.4.6",
+    "pre-commit>=4.0.1",
+    "pytest>=8.3.4",
+    "pytest-django>=4.9.0",
+]
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = [".git", ".venv", "migrations"]
+src = ["backend"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "B", "G", "Q", "UP", "C4"]
+ignore = [
+    "E722",
+]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.ruff.format]
+docstring-code-format = true
+preview = true
