@@ -23,6 +23,8 @@ INSTALLED_APPS = [
     # Third-party apps
     "rest_framework",
     "rest_framework_simplejwt",
+    # My apps
+    "accounts.apps.AccountsConfig",
 ]
 
 MIDDLEWARE = [
@@ -108,10 +110,27 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# DRF
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": ("accounts.authentication.JWTCookieAuthentication",),
+}
+
 # Simple JWT
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=15),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
     # Auth
     "AUTH_HEADER_TYPES": ("Bearer",),
+    # Auth Cookie
+    "AUTH_COOKIE_ACCESS": "access_token",
+    "AUTH_COOKIE_REFRESH": "refresh_token",
+    # ".example.com" or None for standard domain cookie
+    "AUTH_COOKIE_DOMAIN": config("AUTH_COOKIE_DOMAIN", default=None),
+    # Whether the auth cookies should be secure (https:// only).
+    "AUTH_COOKIE_SECURE": config("AUTH_COOKIE_SECURE", cast=bool, default=False),
+    "AUTH_COOKIE_HTTP_ONLY": True,
+    # The flag restricting cookie leaks on cross-site requests. 'Lax', 'Strict' or None to disable the flag.
+    "AUTH_COOKIE_SAMESITE": "Lax",
+    "AUTH_COOKIE_REFRESH_PATH": "/accounts/auth/",
+    "AUTH_COOKIE_USE_CSRF": True,
 }
