@@ -1,6 +1,6 @@
 # Securing Django Rest Framework with JWT Authentication in HttpOnly Cookie
 
-![drf-jwt-httponly-part-1](https://github.com/user-attachments/assets/ff8e8edd-7a9b-4d65-ba4a-afeab6e2a468)
+![drf-jwt-httponly-part-1](https://github.com/user-attachments/assets/32684c54-ce68-405d-88b0-6e19c2734394)
 
 ## Overview
 
