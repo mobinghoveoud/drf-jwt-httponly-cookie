@@ -8,7 +8,14 @@ This project is a practical implementation of JWT-based authentication in **Djan
 **SimpleJWT**. This project is designed to demonstrate how to build a secure authentication system with JWT and handle
 token storage in HttpOnly cookies.
 
-The article accompanying this project covers the following topics:
+## Articles
+
+### Part 1
+
++ **English:** [Securing Django Rest Framework with JWT Authentication in HttpOnly Cookie - Part 1](https://ghoveoud.ir/posts/securing-django-rest-jwt-httponly-cookie-part-1/)  
++ **Persian:** [افزایش امنیت API با استفاده از JWT و کوکی‌ HttpOnly در Django Rest - بخش اول](https://ghoveoud.ir/fa/posts/securing-django-rest-jwt-httponly-cookie-part-1/)  
+
+The article part 1 covers the following topics:
 
 + Introduction to Authentication and JWT
 + Create a Django Project
