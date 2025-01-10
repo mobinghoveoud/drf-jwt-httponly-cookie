@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate
+from django.middleware.csrf import rotate_token
 from rest_framework import status
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.response import Response
@@ -30,5 +31,9 @@ class LoginAPIView(APIView):
         # Set auth cookies
         refresh = RefreshToken.for_user(user)
         set_token_cookies(response, str(refresh.access_token), str(refresh))
+
+        # Rotate CSRF token
+        # Django: For security reasons, CSRF tokens are rotated each time a user logs in.
+        rotate_token(request)
 
         return response

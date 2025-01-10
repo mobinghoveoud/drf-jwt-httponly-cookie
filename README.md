@@ -12,18 +12,13 @@ token storage in HttpOnly cookies.
 
 ### Part 1
 
-+ **English:** [Securing Django Rest Framework with JWT Authentication in HttpOnly Cookie - Part 1](https://ghoveoud.ir/posts/securing-django-rest-jwt-httponly-cookie-part-1/)  
-+ **Persian:** [افزایش امنیت API با استفاده از JWT و کوکی‌ HttpOnly در Django Rest - بخش اول](https://ghoveoud.ir/fa/posts/securing-django-rest-jwt-httponly-cookie-part-1/)  
++ **English:** [Securing Django Rest Framework with JWT Authentication in HttpOnly Cookie - Part 1](https://ghoveoud.ir/posts/securing-django-rest-jwt-httponly-cookie-part-1/)
++ **Persian:** [افزایش امنیت API با استفاده از JWT و کوکی‌ HttpOnly در Django Rest - بخش اول](https://ghoveoud.ir/fa/posts/securing-django-rest-jwt-httponly-cookie-part-1/)
 
-The article part 1 covers the following topics:
+### Part 2
 
-+ Introduction to Authentication and JWT
-+ Create a Django Project
-+ Install and Configuring SimpleJWT
-+ Implement Login API and Storing Tokens in HttpOnly Cookies
-+ Implement Refresh Token API
-+ Implement JWT Authentication with Cookies
-+ Testing Authentication
++ **English:** [Securing Django Rest Framework with JWT Authentication in HttpOnly Cookie - Part 2](https://ghoveoud.ir/posts/securing-django-rest-jwt-httponly-cookie-part-2/)
++ **Persian:** [افزایش امنیت API با استفاده از JWT و کوکی‌ HttpOnly در Django Rest - بخش دوم](https://ghoveoud.ir/fa/posts/securing-django-rest-jwt-httponly-cookie-part-2/)
 
 ## How to Run the Project
 
